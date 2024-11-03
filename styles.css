@@ -1,0 +1,782 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px; /* Set height to match logo height */
+    padding: 0 20px; /* Removed vertical padding */
+    background-color: #1f1f1f; /* Dark background */
+    color: #fff; /* Text color */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Softer shadow for a sleek effect */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Center logo vertically */
+    height: 100%; /* Ensure logo is centered within the header */
+}
+
+.logo img {
+    width: 50px; /* Logo width */
+    height: 50px; /* Logo height */
+    border-radius: 50%; /* Circular shape */
+    object-fit: cover; /* Ensures the image fills the circular area */
+}
+
+/* Optional: Adding hover effects for the logo */
+.logo:hover img {
+    transform: scale(1.05); /* Slightly enlarges the logo on hover */
+    transition: transform 0.2s; /* Smooth transition effect */
+}
+
+/* Optional: Style for header links/buttons */
+header a {
+    color: #fff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 15px; /* Space between links */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+header a:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
+
+/* Navigation links styling */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #bb86fc; /* Accent color for links on hover */
+}
+
+/* Main content styling */
+main {
+    margin-top: 80px; /* Space for the fixed header */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Section styling */
+section {
+    margin: 40px 0;
+}
+
+/* Home section styling */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 180px 20px;
+    background: url('pt animeted.jpg') no-repeat;    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    color: #e0e0e0; /* Text color */
+    position: relative; /* Allows positioning of the imgHover */
+}
+
+/* Styling for the content inside the home section */
+.home-content {
+    max-width: 600px;
+}
+
+/* Heading styling */
+.home-content h1 {
+    font-size: 48px;
+    color: #bb86fc; /* Accent color for the name */
+}
+
+.home-content h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #e0e0e0;
+}
+
+.home-content p {
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+/* Styling for buttons */
+.btn-box {
+    margin-top: 30px;
+}
+
+.btn-box a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #bb86fc;
+    padding: 12px 24px;
+    border-radius: 5px;
+    margin-right: 15px;
+    transition: background-color 0.3s;
+}
+
+.btn-box a:hover {
+    background-color: #9b63c8; /* Darker shade for hover effect */
+}
+
+/* Styling for social icons */
+.home-sci {
+    display: flex;
+    flex-direction: row; /* Set to row for horizontal alignment */
+    gap: 15px; /* Space between icons */
+    margin-top: 20px; /* Margin to position below the img1 */
+}
+
+.home-sci a {
+    font-size: 24px;
+    color: #e0e0e0;
+    transition: color 0.3s;
+}
+
+.home-sci a:hover {
+    color: #bb86fc; /* Accent color for hover */
+}
+
+/* Home image hover effect styling */
+.home-imgHover {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(187, 134, 252, 0.3), transparent);
+    border-radius: 50%;
+    transform: translate(50%, 50%);
+    z-index: -1; /* Positioned behind the content */
+}
+
+/* About Me, Portfolio, and Contact section styling */
+#about, #portfolio, #contact {
+    background-color: #1e1e1e; /* Slightly lighter than the body for contrast */
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Styling for headings in sections */
+section h2 {
+    color: #bb86fc; /* Accent color for section titles */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content {
+        max-width: 100%;
+    }
+
+    .home-sci {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .home-imgHover {
+        width: 200px;
+        height: 200px;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+}
+/* Contact List Styling */
+.contacts-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align all items */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content */
+    margin: 15px 0;
+    padding: 15px;
+    width: 100%; /* Make the items take the full width */
+    max-width: 600px; /* Limit the maximum width */
+    background-color: #1f1f1f; /* Background color for the item */
+    border-radius: 10px;
+    transition: background-color 0.3s, border 0.3s; /* Smooth transition for hover effect */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.contact-item:hover {
+    background-color: #bb86fc; /* Change background color on hover */
+    border: 2px solid #9b63c8; /* Add border on hover */
+}
+
+.icon-box {
+    margin-right: 15px;
+    font-size: 24px; /* Adjust the icon size */
+    color: #bb86fc; /* Accent color for icons */
+}
+
+.contact-info {
+    text-align: center; /* Center the text within the info */
+    color: #e0e0e0; /* Light text color */
+}
+
+.contact-title {
+    font-weight: bold;
+}
+
+.contact-link {
+    color:  #e0e0e0; /* Accent color for links */
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+.about .article-title {
+    margin-bottom: 15px;
+    color: #ffffff; /* Title color */
+}
+
+.about-text {
+    color: var(--light-gray);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-300);
+    line-height: 1.6;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+/* Service Section */
+.service {
+    margin-bottom: 35px;
+}
+
+.service-title {
+    margin-bottom: 20px;
+    color: #ffffff; /* Service title color */
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-item {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: var(--shadow-2);
+    z-index: 1;
+    width: calc(50% - 10px); /* Two items per row */
+    transition: transform 0.3s ease; /* Animation for hover effect */
+}
+
+.service-item:hover {
+    transform: scale(1.05); /* Enlarge the box on hover */
+    background: rgba(255, 255, 255, 0.2); /* Darker effect on hover */
+}
+
+.service-icon-box {
+    margin-bottom: 10px;
+    text-align: center; /* Center align icon */
+}
+
+.service-icon-box box-icon {
+    font-size: 40px; /* Icon size */
+    color: #ffffff; /* Icon color */
+}
+
+.service-content-box {
+    text-align: center;
+}
+
+.service-item-title {
+    margin-bottom: 7px;
+    color: #f9c74f; /* Title color */
+}
+
+.service-item-text {
+    color: var(--light-gray);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-3);
+    line-height: 1.6;
+}
+
+/* Container for work experience section */
+.work-experience {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically for mobile */
+    padding: 20px;
+}
+
+/* Heading styling */
+.work-experience-heading {
+    text-align: center;
+    color: #bb86fc; /* Accent color for heading */
+    margin-bottom: 20px;
+}
+
+/* Container for cards */
+.experience-cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap into the next line */
+    justify-content: space-between; /* Space between cards */
+}
+
+/* Each experience card */
+.experience-card {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    padding: 20px;
+    width: calc(50% - 20px); /* Two cards per row, accounting for margins */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden; /* Hide overflow for certificate section */
+    margin-bottom: 20px; /* Space between rows */
+}
+
+/* Circular company logo */
+.company-logo img {
+    width: 40%;
+    height: ;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 25px;
+}
+
+/* Company name styling */
+.company-name {
+    margin-bottom: 20px;
+    color: #bb86fc;
+}
+
+/* Styling for the buttons */
+.card-buttons {
+    margin-top: 15px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #bb86fc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #9b63c8;
+}
+
+/* Hidden section for more details and certificates */
+.more-details, .certificate-section {
+    display: none;
+    margin-top: 20px;
+    background-color: #292929;
+    padding: 15px;
+    border-radius: 10px;
+    color: #e0e0e0;
+}
+
+/* Certificate section styling */
+.certificate-section {
+    position: absolute; /* Positioned relative to card */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(249, 249, 249, 0.9); /* Slightly transparent background */
+    color: #000;
+    padding: 20px;
+    z-index: 1;
+    overflow-y: auto; /* Allows scrolling if content exceeds height */
+}
+
+/* A4-sized certificate image */
+.certificate-content {
+    text-align: center;
+}
+
+.certificate-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: 595px; /* A4 width in pixels */
+    height: 842px; /* A4 height in pixels */
+    object-fit: contain;
+    border: 2px solid #000;
+    margin-bottom: 20px;
+}
+
+/* Back button styling */
+.back-btn {
+    margin-top: 20px;
+    background-color: #bb86fc;
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.back-btn:hover {
+    background-color: #9b63c8;
+}
+
+/* Card hover effect */
+.experience-card:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .work-experience {
+        flex-direction: column; /* Stack the heading and cards */
+    }
+
+    .experience-cards-container {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center align cards */
+    }
+
+    .experience-card {
+        width: 100%; /* Full width for smaller screens */
+        margin-bottom: 20px; /* Space between cards */
+    }
+}
+.work-experience {
+    margin: 20px 0;
+    text-align: center; /* Center the heading */
+}
+
+.experience-heading {
+    color: #bb86fc; /* Accent color for the heading */
+    margin-bottom: 20px;
+}
+
+.experience-card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to the next line */
+    justify-content: center; /* Centers the cards in the container */
+    gap: 20px; /* Space between cards */
+}
+
+.experience-card {
+    background-color: #1f1f1f; /* Card background color */
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(50% - 20px); /* Two cards per row with some spacing */
+    transition: transform 0.3s; /* Animation for hover effect */
+    position: relative; /* Allows positioning of inner elements */
+}
+
+.experience-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Add more styles for buttons, company logos, and certificate sections as needed */
+/* Basic styles for body and headings */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+h2 {
+    color: #bb86fc;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Card styling */
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: calc(48% - 20px);
+    height: 180px;
+}
+
+/* Project image styling */
+.project-img {
+    width: 55%; 
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Buttons inside the card */
+.card-buttons1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.btn {
+    background-color: #bb86fc;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.btn:hover {
+    background-color: #9b63c8;
+}
+
+/* Modal for project details */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #1e1e1e;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    color: #e0e0e0;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #fff;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #bb86fc;
+    margin-bottom: 20px;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.project-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: fit-content;
+}
+
+.card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    margin: 10px;
+    flex: 0 0 24%;
+    text-align: center;
+    position: relative;
+    height: 300px; /* Adjust as needed */
+}
+
+.project-img {
+    width: 100%;
+    height: 200px; /* Adjust as needed */
+    border-radius: 10px;
+}
+
+.card-buttons2 {
+    padding: 10px;
+}
+
+.btn {
+    background-color: #bb86fc;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.live-btn {
+    background-color: #03dac5;
+}
+
+.git-btn {
+    background-color: #bb86fc;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(187, 134, 252, 0.8);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(187, 134, 252, 1);
+}
+
+footer {
+    text-align: right;
+    padding: 20px;
+    background-color: #1f1f1f; /* Same background as header */
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.technical-skills {
+    padding: 40px;
+    background-color: #121212; /* Dark background for the section */
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between skill boxes */
+}
+
+.skill-box {
+    background-color: #ffffff; /* White background for skill box */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Center the logo and text */
+    width: 100px; /* Adjust width as needed */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transition for hover effect */
+}
+
+.skill-box:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+.skill-box box-icon {
+    font-size: 40px; /* Adjust the icon size */
+    color: #306998; /* Color for the logo */
+}
+
+.skill-box i {
+    font-size: 40px; /* Adjust icon size for devicons */
+    color: #306998; /* Change color as needed */
+}
+
+.skill-box p {
+    margin-top: 10px; /* Space between icon and text */
+    color: black; /* Text color for the skill names */
+    font-weight: bold; /* Optional: make the text bold */
+}
