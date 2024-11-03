@@ -13,6 +13,8 @@ body {
     background-color: #121212; /* Dark background */
     color: #e0e0e0; /* Light text color */
     line-height: 1.6;
+    overflow-x: hidden;
+
 }
 
 /* Header styling */
@@ -784,14 +786,23 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 @media (max-width: 768px) {
-    /* Adjustments for tablets and mobile screens */
-    .btn-box a {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
     .container {
         flex-direction: column;
+        padding: 10px;
     }
+    .btn-box a {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    /* Adjust font sizes and other specific elements */
+    h1, p {
+        font-size: smaller;
+    }
+}
+
 }

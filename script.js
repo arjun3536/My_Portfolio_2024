@@ -101,3 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+if (window.innerWidth < 768) {
+    document.querySelector('.some-element').style.fontSize = '14px';
+}
